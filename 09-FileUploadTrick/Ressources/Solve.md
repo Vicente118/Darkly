@@ -1,0 +1,3 @@
+- We can post images on http://localhost:8888/?page=upload
+- Let's intercept the request with Burp. We can try to modify the file to upload and upload a malicious php scripts that will be executed when accessed by accessing this uploaded script with a GET request.
+- The script could be a reverse shell and it could give us a full access of the server.
