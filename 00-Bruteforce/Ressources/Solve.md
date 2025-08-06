@@ -3,3 +3,11 @@
 - In fact we fond that the password of the user admin is "shadow"
 
 Flag: b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2
+
+How to prevent:
+    1. Using a complex password (Password policy from server)
+    2. Using 2FA authentification
+    3. Using a password manager
+
+Impact:
+    1. Account takeover from guessing the password

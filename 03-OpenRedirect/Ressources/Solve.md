@@ -22,3 +22,34 @@
 ```
 
 - We could modify the rediction website -> it's an open redirect vulnerability because we have control of the redirection.
+
+
+How to prevent this type of attack ?
+    1. Replace this kind of code:
+
+    ```php
+        header("Location: " . $_GET['site']);
+    ```
+
+    By 
+
+    ```php
+        $sites = [
+        'facebook' => 'https://facebook.com/YourPage',
+        'twitter' => 'https://twitter.com/YourPage',
+        ];
+
+        if (isset($_GET['site']) && array_key_exists($_GET['site'], $sites)) {
+            header("Location: " . $sites[$_GET['site']]);
+        } else {
+            // redirect to a safe fallback
+            header("Location: /");
+        }
+    ```
+    
+    Allowing only certains websites redirection prevent for this type of vulnerability.
+
+
+Impact:
+    1. Phishing: We could redirect someone to a phishing website.
+    2. Stealing credentials or session under certain conditions.

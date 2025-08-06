@@ -4,7 +4,15 @@
 - Let's try to find the flag 
 
 ```bash
-> wget -e robots=off --recursive --no-parent http://localhost:8888/.hidden
+> wget -e robots=off --recursive --no-parent http://localhost:8888/.hidden/
 > grep -R "flag"
 igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README:Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466 
 ```
+
+- How to prevent:
+    1. Don't expose sensitive folders or files in robots.txt
+    2. Use authentification or permissions rules on sensitives folders and files
+
+- Impact:
+    1. Information disclosure
+    2. Access to hidden files/directories
